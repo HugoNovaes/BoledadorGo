@@ -16,13 +16,18 @@ O arquivo _settings.json_ contém os parâmetros para inicialização do Boletad
 ```
 
 ### numThreads
-    A quantidade de threads que o BoletadorGo utilizará. Recomenda-se utilizar a mesma quantidade de threads da CPU para uma melhor performance. Por exemplo, se a CPU possui 8 núcleos e 16 threads, utilize o valor 16.
+    A quantidade de threads que o BoletadorGo utilizará. Recomenda-se utilizar a mesma
+    quantidade de threads da CPU para uma melhor performance. Por exemplo, se a CPU
+    possui 8 núcleos e 16 threads, utilize o valor 16.
 
 ### freqImpressao
-    A velocidade em que o BoletadorGo imprimirá os resultados na tela, em milisegundos. Quanto menor esse valor, maior a frequência da impressão. Entretanto, isso pode impactar na performance do boletador.
+    A velocidade em que o BoletadorGo imprimirá os resultados na tela, em milisegundos.
+    Quanto menor esse valor, maior a frequência da impressão. Entretanto, isso pode
+    impactar na performance do boletador.
 
 ### limiteFila
-    Quantidade de operações que o BoletadorGo irá enfileirar caso o _endpoint_ demore a responder.
+    Quantidade de operações que o BoletadorGo irá enfileirar caso o _endpoint_ demore
+    a responder.
 
 ### timeout
     Tempo limite de resposta para cada envio de operação ao _endpoint_.
@@ -31,10 +36,12 @@ O arquivo _settings.json_ contém os parâmetros para inicialização do Boletad
     Endereço do método a ser acionado na API de destino das rajadas.
 
 ### token
-    Token JWT a ser utilizado caso a API exiga uma conexão autenticada. Incluir o tipo de autenticação no conteúdo do token. Exemplo "Bearer xxxxxxxxx".
+    Token JWT a ser utilizado caso a API exiga uma conexão autenticada. Incluir o tipo
+    de autenticação no conteúdo do token. Exemplo "Bearer xxxxxxxxx".
 
 # Arquivo template.txt
-    Arquivo no formato json com marcações precedidas por '#' que serão substituídas pelo BoletadorGo por valores aleatórios ou sequenciais, dependendo do tipo de variável.
+    Arquivo no formato json com marcações precedidas por '#' que serão substituídas
+    pelo BoletadorGo por valores aleatórios ou sequenciais, dependendo do tipo de variável.
 
 ## Variáveis do template
 
@@ -99,10 +106,14 @@ O arquivo _settings.json_ contém os parâmetros para inicialização do Boletad
 ```
 
 # Arquivo _codintegracao.json_
-    Este arquivo possui apenas 2 parâmetros: "data" e "codIntegracao". Se a data do sistema não for a mesma do parâmetro "data", o valor de "codIntegracao" é resetado para 1.
+    Este arquivo possui apenas 2 parâmetros: "data" e "codIntegracao". Se a data do
+    sistema não for a mesma do parâmetro "data", o valor de "codIntegracao" é resetado
+    para 1.
 
     O valor do campo "codIntegracao" é atualizado automaticamente pelo BoletadorGo.
-    Caso ocorram error de violação de chave, deve-se consultar qual o valor do último código de integração na API de destino e utilizar esse mais 1 no campo "codIntegracao" para que o BoletadorGo dê continuidade na geração dos próximos códigos de integração.
+    Caso ocorram error de violação de chave, deve-se consultar qual o valor do último
+    código de integração na API de destino e utilizar esse mais 1 no campo "codIntegracao"
+    para que o BoletadorGo dê continuidade na geração dos próximos códigos de integração.
 
 ```
 {
@@ -143,7 +154,8 @@ O arquivo _settings.json_ contém os parâmetros para inicialização do Boletad
 
 ## Exemplos:
 ####  BoletadorGo
-    Sem parâmetros, executa utilizando as configurações default existentes no arquivo settings.json
+    Sem parâmetros, executa utilizando as configurações default existentes no
+    arquivo settings.json
 ####  BoletadorGo --max:1000
     Executa uma rajada de 1000 operações e termina o processo.
 ####  BoletadorGo --result:retornos.txt --envio:envios.txt --max:5000
